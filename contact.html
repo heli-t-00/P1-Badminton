@@ -15,27 +15,26 @@
     <div>
     <main>
         <form action="" method="post">
-            <label>Name:</label>
-            <input>
-            <label>Lastname:</label>
-            <input>
-            <br>
-            <label>Email:</label>
-            <input type="email">
+            <fieldset>
+                <legend>Your details</legend>
+            <div>
+                <label>Name:</label>
+            <input id="name" type="text name="full_name" placeholder="Your full name"
+            </div>
+            <div>
+                <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Your email">
+            </div>
+            <div>
             <label>Contact number:</label>
             <input type="text">
-
+            </div>
+            </fieldset>
             <br>
-         
-<label for="reason">Reason for Contacting us:</label>
-<select name="reason" id="reason">
-<option text="Club session" value="Club session">Club Session</option>
-<option text="Junior_Coaching" value="Junior_Coaching">Junior Coaching</option>
-<option text="Adult_coaching" value="Adult_coaching">Adult Coaching</option>
-</select>
-<br>
+        
 
-<p>Reason for contacting us:</p>
+<fieldset>
+<legend>Reason for contacting us:</legend>
 <form>
     <label for="Club_session">Club Session</label>
     <input type="radio" name="reason" value="club_session">
@@ -43,13 +42,13 @@
 <input type="radio" name="reason" value="Junior_coaching">
 <label for="Adult_coaching">Adult Coaching</label>
 <input type="radio" name="reason" value="Adult_coaching">
-
+</fieldset>
 </form>
+</fieldset>
 
-            <br>
             <label for="message">Message:</label>
             <br>
-            <textarea name="message" id="message" placeholder="tell us more" rows="10" cols="40">tell us more</textarea>
+            <textarea name="message" id="message" placeholder="tell us more" rows="10" cols="50">tell us more</textarea>
         <br>
             <input type="submit">
 
@@ -60,23 +59,29 @@
     </div>
 <div>
     <header>
-        <h2>Call Us</h2>
+        <h3>Call Us</h3>
+        </header>
         <p>ABC: 07123123123</p>
         <p>ABC: 07912312312</p>
     
 </div>
 <article>
     <header>
-        <h2>Where we play</h2>
-        <p>Lycee School, Wembley</p>
+        <h3>Where we play</h3>
+</header>
+<section>        
+<p><strong>Lycee School</strong>,<br> 54 Forty Lane,<br> Wembley, London,<br> HA9 9LY </p>
+        <iframe width="100%" height="300" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.27960419654846197%2C51.563925881939085%2C-0.26887536048889166%2C51.56878100796455&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/51.566357/-0.274245"></a></small>
+</section>
         
-    </header>
-    <main>
-<!-- include a map link to LOCATION-->
-
-    </main>
 </article>
+<article>
+    <section>
+        <a href="https://www.facebook.com" target="_blank" rel="nopener">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" rel="nopener">Instagram</a>
+    </section>
 
+</article>
 
     <footer>
         <!--include copyright symbol-->
