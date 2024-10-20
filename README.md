@@ -21,11 +21,11 @@ In addition to hosting play and coaching schedules, the site can potentially wil
 - Highlight Coaching: Promote coaching opportunities offered under N&P Badminton Club to attract new players, both junior and adult.
 
 
-## Potential Features to Include:
-### Target Audience:
+## Target Audience:
 - Badminton Players: Those looking for a friendly local badminton club to play regularly.
 - Coaching Seekers: Beginners or intermediate players, both adults and children, looking to improve their skills through coaching.
-### User Stories:
+
+## User Stories:
 **General Users:**
 - “I want a website that is easy to navigate and intuitive to use.”
 - “I want to be confident that my information is secure when interacting with others.”
