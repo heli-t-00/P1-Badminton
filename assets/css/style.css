@@ -1,15 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* General styles */
 body {
-  background-color: beige;
-}
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Generic project styles */
 
+  /*Header */
+}
 header {
-  font-size: xx-large;
+  background-color: rgb(240, 240, 158);
 }
 
-nav a {
-  color: rgb(38, 0, 255);
+/* Main content */
+main {
+  background-color: beige;
+  /* make main element take up any surplus space to push footer down */
+  flex: 1 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(43, 255, 0, 0.562);
+  color: blueviolet;
+}
+
+/* Start with 4 columns, 25% width */
+.column {
+  width: 45%;
+  float: left;
+  padding: 5px;
+}
+
+/* Drop down further to 1 column for smart phone sizes, 100% width */
+@media screen and (max-width: 480px) {
+  .column {
+    width: 100%;
+  }
+}
+
+nav {
+  /* the following code will move the list to the RIGHT handside applies to NAV element*/
+  position: absolute;
+  right: 10px;
+  top: 2px;
+
   text-align: left;
 }
-footer {
-  color: blueviolet;
+li {
+  list-style: none; /* get rid of bullent point*/
+  display: inline-block; /*make the list appear on SAME line*/
+  margin-left: 10px; /*use padding or margin to give it space*/
+  color: rgb(223, 15, 15);
+  background-color: azure;
+}
+/* add ID to the NAV list if you have more than one list*/
+/*USE DISPLAY to make the list appear side by side */
+
+li:hover {
+  color: blue;
+  background-color: darkcyan;
+}
+
+/*------------Footer--------
+media query for responsive screen*/
+
+/* Drop down further to 1 column for smart phone sizes, 100% width */
+@media screen and (max-width: 480px) {
+  .column {
+    width: 100%;
+  }
+}
+/* Start with 4 columns, 25% width */
+.column {
+  width: 45%;
+  float: left;
+  padding: 5px;
 }
