@@ -111,17 +111,20 @@ main {
 
 #cover-text {
   /* Final rgba value sets the opacity so it is semi-transparent */
-  background-color: rgba(139, 82, 254, .5 );
-  color:#004aad;
-  font-size: 130%;
+  background-color: rgba(139, 82, 254, .6 );
+  font-size: 150%;
   position: absolute;
   bottom: 20px;
-  width: 50%;
+  width: 80%;
   min-height: 200px;
   padding-top: 50px;
   padding-left: 25px;
   
 }
+#cover-text >h2, #cover-text >h3 {
+  color:#004aad
+}
+
 
 /* Footer */
 
@@ -177,10 +180,17 @@ main {
     margin-top: 79px;
   }
 
-  /* Large devices (laptops and desktops, 992px and up) CHECK THIS IN CLASS*/
-  @media screen and (min-width: 992px) {
-    #menu a:hover {
-      border-bottom: 1px solid #efefef;
-    }
+   /* Shuttle image */
+ #cover-text {
+  width: 300px;
+  left: 50px;
+}
+
+  
+}
+/* Large devices (laptops and desktops, 992px and up) CHECK THIS IN CLASS*/
+@media screen and (min-width: 992px) {
+  #menu a:hover {
+    border-bottom: 1px solid #efefef;
   }
 }
