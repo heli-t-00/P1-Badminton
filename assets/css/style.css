@@ -1,85 +1,153 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+/* Google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Lato&display=swap");
 
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 /* General styles */
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* Generic project styles */
-
-  /*Header */
+  color: #004aad;
+  font-family: "lato", sans-serif;
 }
+
+/* Header */
 header {
-  background-color: rgb(240, 240, 158);
+  background-color: #004aad; /*set padding so it does not stick to the sides of screen*/
+  padding: 0 1rem;
+  /*fixing the position allows the nav bar to scroll along*/
+  position: fixed;
+  z-index: 99; /*allows the header to cover the width of the screen (fill the width of screen)*/
+  width: 100%;
+  /*give shadow between header and main content - so it looks like it is layered ontop of the content*/
+  box-shadow: 0 2px 2px #8b52fe;
+  /*first value in box shawdow is horizontal offset, negative value offset to left, positive value offset to right, as the header is full width set at 100% we will set it as 'zero', next value is virtical offset - +ve val display shadow below element, -ve valu display ABOVE element*, small shadow set to 2px, how soft/hard the shadow will look, set 2px/*/
+  /*adjusting the nav bar to right*/
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-/* Main content */
+header a {
+  text-decoration: none;
+  /*inherit color of body*/
+  color: #efefef;
+}
+
+header i {
+  color:#8b52fe
+}
+
+h1 {
+  font-family: "oswald", sans-serif;
+  text-transform: uppercase; /*allow to change casing in future if required*/
+  letter-spacing: 2px;
+  color: #effefe;
+}
+/*id given to menu in the unordered list*/
+#menu {
+  font-size: 110%;
+  letter-spacing: 4px;
+  list-style-type: none;
+}
+/*applying space between the list in nav*/
+#menu > li {
+  margin-bottom: 1em;
+}
+.active {
+  border-bottom: 1px solid #3a3a3a;
+}
+
+/*NavBar styles with dropdown toggle*/
+nav {
+  position: absolute; /**/
+  background-color: #004aad;
+  padding: 0 1rem;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 2px #3a3a3a;
+  /*set display to none, so that only when clicked it will appear*/
+  display: none;
+  top: 100%; /*start at bottom of parent property*/
+}
+
+/*Nav toggle*/
+#nav-toggle:checked ~ nav {
+  display: block;
+}
+#nav-toggle {
+  display: none; /*hides the check box*/
+}
+.nav-toggle-lable {
+  font-size: 2rem;
+}
+
+/* Main content*/
 main {
-  background-color: beige;
-  /* make main element take up any surplus space to push footer down */
+  background-color: azure;
+  /* make main element take up any surplus space to push footer down*/
   flex: 1 0 auto;
+  margin-top: 47px;
 }
 
 /* Footer */
-footer {
-  background-color: rgba(43, 255, 0, 0.562);
-  color: blueviolet;
+
+#social-networks {
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
 }
 
-/* Start with 4 columns, 25% width */
-.column {
-  width: 45%;
-  float: left;
-  padding: 5px;
+#social-networks i {
+ font-size: 160%; 
+ padding: 5%;
+ color: #004aad
 }
 
-/* Drop down further to 1 column for smart phone sizes, 100% width */
-@media screen and (max-width: 480px) {
-  .column {
-    width: 100%;
+/*Media query: tablets and larger (768px plus) */
+@media screen and (min-width: 768px) {
+  /*Header*/
+  nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
   }
-}
-
-nav {
-  /* the following code will move the list to the RIGHT handside applies to NAV element*/
-  position: absolute;
-  right: 10px;
-  top: 2px;
-
-  text-align: left;
-}
-li {
-  list-style: none; /* get rid of bullent point*/
-  display: inline-block; /*make the list appear on SAME line*/
-  margin-left: 10px; /*use padding or margin to give it space*/
-  color: rgb(223, 15, 15);
-  background-color: azure;
-}
-/* add ID to the NAV list if you have more than one list*/
-/*USE DISPLAY to make the list appear side by side */
-
-li:hover {
-  color: blue;
-  background-color: darkcyan;
-}
-
-/*------------Footer--------
-media query for responsive screen*/
-
-/* Drop down further to 1 column for smart phone sizes, 100% width */
-@media screen and (max-width: 480px) {
-  .column {
-    width: 100%;
+  #menu {
+    display: flex;
   }
-}
-/* Start with 4 columns, 25% width */
-.column {
-  width: 45%;
-  float: left;
-  padding: 5px;
+  #menu > li {
+    padding-left: 1rem;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+  #logo {
+    font-size: 200%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+  }
+  /* Main Content */
+  main {
+    /*Push main content down to accommodate larger header */
+    margin-top: 79px;
+  }
+
+  /* Large devices (laptops and desktops, 992px and up) CHECK THIS IN CLASS*/
+  @media screen and (min-width: 992px) {
+    #menu a:hover {
+      border-bottom: 1px solid #efefef;
+    }
+  }
 }

@@ -20,24 +20,44 @@
     <!--Favicon - look for a shuttlecock-->
   </head>
   <body>
-    <!--header content-->
+        <!-- Add semantic elements - header, main, footer-->
+    <!-- header-->
     <header>
-      <h1>N & P Badminton Club</h1>
+      <a href="index.html">
+        <h1 id="logo">N & P Badminton</h1>
+      </a>
+      <!--Add toggle for menu using css only-->
+      <input type="checkbox" id="nav-toggle" name="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"></i></label>
+
+      <!-- adding Nav element using unordered list, include href so that all the pages can be linked-->
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
+        <ul id="menu">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-
     <!--main body content-->
-    <main></main>
+    <main>
+<h> MAIN BODY</h>
+
+    </main>
 
     <!--Footer content-->
+    <!--footer-->
     <footer>
-      <h>&copy LoveSoftwareDevelopment</h>
+      <ul id="social-networks">
+        <li><a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Visit our facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter feed page (opens in a new tab)"><i class="fa-brands fa-square-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram feed page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+      <h id="footer-id">&copy CodingwithLove</h>
     </footer>
+    <!-- Font awesome kit code-->
+    <script src="https://kit.fontawesome.com/00dc1bd44c.js" crossorigin="anonymous"></script>
+ 
   </body>
 </html>
