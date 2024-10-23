@@ -50,6 +50,7 @@ h1 {
   text-transform: uppercase; /*allow to change casing in future if required*/
   letter-spacing: 2px;
   color: #effefe;
+  margin-left: ;
 }
 /*id given to menu in the unordered list*/
 #menu {
@@ -65,6 +66,10 @@ h1 {
   border-bottom: 1px solid #3a3a3a;
 }
 
+#logoimage {
+  height: 100px;
+  width: 100px;
+}
 /*NavBar styles with dropdown toggle*/
 nav {
   position: absolute; /**/
@@ -111,6 +116,13 @@ main {
  font-size: 160%; 
  padding: 5%;
  color: #004aad
+}
+
+#footer-id {
+  margin-bottom: 2%;
+  margin-left: 1%;
+
+  font-size: small
 }
 
 /*Media query: tablets and larger (768px plus) */
